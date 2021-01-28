@@ -11,7 +11,7 @@ axios.defaults.params = {
   per_page: 12,
 };
 
-const apiService = async ({ q, page }) => {
+const apiService = async (q, page) => {
   try {
     const { data } = await axios.get('', { params: { q, page } });
     return data.hits;
